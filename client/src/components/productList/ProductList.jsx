@@ -1,6 +1,7 @@
 import React from "react";
 import "./productList.css";
 import Product from "../product/Product";
+import { products } from "../../data";
 const ProductList = () => {
   return (
     <div className="pl">
@@ -14,11 +15,11 @@ const ProductList = () => {
         </p>
       </div>
       <div className="pl-list">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {/* map the product data.js in each item into the Product Component */}
+        {products.map((item) => (
+          //pass the id,img and link of data.js inside the Product Component as props
+          <Product key={item.id} img={item.img} link={item.link} />
+        ))}
       </div>
     </div>
   );
