@@ -6,31 +6,38 @@ import "./contact.css";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { useState } from "react";
-// import isEmpty from "validator/lib/isEmpty";
-// import isEmail from "validator/lib/isEmail";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
-  // const [message, setMessage] = useState("");
 
+  //handles the form data validation
   const schema = yup.object().shape({
-    user_name: yup.string().required("Your Name is Required"),
-    user_subject: yup.string().required(),
-    user_email: yup.string().email().required(),
-    messages: yup.string().required(),
+    user_name: yup.string().required("Your Name is required"),
+    user_subject: yup.string().required("Subject is required"),
+    user_email: yup.string().email().required("Email is required"),
+    messages: yup.string().required("Message is required"),
   });
+
+  // register is a part of useForm hook that handles the input value validation
+  // handleSubmit is a part of useForm hook that receive the form data if form validation is successful
+  //  formstate is a part of react hook form / useForm,
+  //  which is the state of the form and grab only the errors of the yup that will display using p tag
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
+    //using the hookform/resolver package,
+    // it will tell the react hook form that the data should be in schema yup format
     resolver: yupResolver(schema),
   });
 
-  const OnSubmit = (data) => {
+  //handles the form data from emailjs
+  const Submit = (data) => {
     console.log(data);
     emailjs
       .sendForm(
@@ -49,47 +56,7 @@ const Contact = () => {
         }
       );
   };
-  // const [formdata, setFormdata] = useState({
-  //   user_email: "",
-  //   user_name: "",
-  //   user_subject: "",
-  //   user_message: "",
-  // });
-  // const { user_email, user_name, user_subject, user_message } = formdata;
 
-  // const handleChange = (e) => {
-  //   setFormdata({
-  //     ...formdata,
-  //     [e.target.name]: e.target.value,
-
-  //     message: "",
-  //   });
-  // };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (isEmail()) {
-  //     setFormdata({
-  //       ...formdata,
-  //       message: "All fields are required",
-  //     });
-  //   }
-  // emailjs
-  //   .sendForm(
-  //     "service_qtspq89",
-  //     "template_hmit5k8",
-  //     formRef.current,
-  //     "NhM_X2yblZ-S3LEAM"
-  //   )
-  //   .then(
-  //     (result) => {
-  //       console.log(result.text);
-  //       setDone(true);
-  //     },
-  //     (error) => {
-  //       console.log(error.text);
-  //     }
-  //   );
-  // };
   return (
     <div className="c">
       <div className="c-bg"> </div>
@@ -116,45 +83,42 @@ const Contact = () => {
             <b>What is yor story?</b>Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Molestias.
           </p>
-          {/* <form ref={formRef} onSubmit={handleSubmit}> */}
-          <form ref={formRef} onSubmit={handleSubmit(OnSubmit)}>
-            <input
-              type="text"
-              placeholder="Name"
-              // name="user_name"
-              // value={user_name}
-              // onChange={handleChange}
-              {...register("user_name")}
-            />
+
+          {/* pass the formref from useRef hook thats handle the emailjs*/}
+          {/* pass the handleSubmit method of useform to handle all the inputs before \
+          executing OnSubmit method that handles the email js     */}
+          <form ref={formRef} onSubmit={handleSubmit(Submit)}>
+            <input type="text" placeholder="Name" {...register("user_name")} />
+            {/* check if the user_name has an error then fire the message */}
             <p className="errortext">{errors.user_name?.message}</p>
+
             <input
               type="text"
               placeholder="Subject"
-              // name="user_subject"
               {...register("user_subject")}
             />
+            {/* check if the user_subject has an error then fire the message */}
             <p className="errortext">{errors.user_subject?.message}</p>
 
             <input
               type="text"
               placeholder="Email"
-              // name="user_email"
-              // value={user_email}
               {...register("user_email")}
             />
+            {/* check if the user_email has an error then fire the message */}
             <p className="errortext">{errors.user_email?.message}</p>
 
             <textarea
               rows="5"
               placeholder="Message"
-              // name="message"
-              // value={message}
               {...register("messages")}
             ></textarea>
+            {/* check if the messages has an error then fire the message */}
             <p className="errortext">{errors.messages?.message}</p>
 
             <button>Submit</button>
-            {/* {message && setMessage(message)} */}
+
+            {/* if the submit button is true and doesn't have errors display the message */}
             {done && "Your response has been successfully submitted, Thankyou."}
           </form>
         </div>
