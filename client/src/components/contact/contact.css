@@ -67,3 +67,7 @@ button {
   font-weight: 500;
   cursor: pointer;
 }
+.errortext {
+  color: red;
+  width: 100%;
+}
