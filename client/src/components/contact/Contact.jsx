@@ -1,7 +1,9 @@
 import React from "react";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
-import Address from "../../img/address.png";
+import Github from "../../img/github.png";
+import Linkedin from "../../img/linkedin.png";
+import Facebook from "../../img/facebook.png";
 import "./contact.css";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
@@ -62,26 +64,35 @@ const Contact = () => {
       <div className="c-bg"> </div>
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title">Let's discuss your project</h1>
+          <h1 className="c-title">Contact Me</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
-              +1 1234 556 75
+              +63 09092540911
             </div>
             <div className="c-info-item">
               <img src={Email} alt="" className="c-icon" />{" "}
               mel.espiloy1@gmail.com
             </div>
             <div className="c-info-item">
-              <img src={Address} alt="" className="c-icon" /> Naga City
-              Camarines Sur Philippines
+              <img src={Github} alt="" className="c-icon" />{" "}
+              https://github.com/Mambamel-dev
+            </div>
+            <div className="c-info-item">
+              <img src={Linkedin} alt="" className="c-icon" />{" "}
+              https://www.linkedin.com/in/mel-espiloy-09b4ba23b/
+            </div>
+            <div className="c-info-item">
+              <img src={Facebook} alt="" className="c-icon" />
+              https://www.facebook.com/mel.espiloy
             </div>
           </div>
         </div>
         <div className="c-right">
           <p className="c-desc">
-            <b>What is yor story?</b>Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Molestias.
+            <b>Please do not hesitate to contact me.</b>Whether you have a
+            question or just want to say hi, I’ll try my best to get back to
+            you!
           </p>
 
           {/* pass the formref from useRef hook thats handle the emailjs*/}

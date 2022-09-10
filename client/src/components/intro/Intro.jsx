@@ -17,11 +17,7 @@ const Intro = () => {
               <div className="i-title-item">Frontend Developer</div>
             </div>
           </div>
-          <div className="i-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-            similique tenetur facere perspiciatis doloremque adipisci quo
-            reprehenderit accusamus accusantium natus!
-          </div>
+          <div className="i-desc">I build things from the web</div>
         </div>
         <svg
           width="75"
