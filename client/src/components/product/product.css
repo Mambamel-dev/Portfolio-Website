@@ -1,10 +1,12 @@
-.p {
+.main-p {
   width: 30%;
   /* height: 100vh; */
   margin: 20px 10px;
   border: 2px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
-  overflow: hidden;
+}
+.p {
+  /* overflow: hidden; */
 }
 .p-browser {
   height: 20px;
@@ -30,4 +32,14 @@
 }
 .p:hover .p-img {
   transform: translateY(-10%);
+}
+.p-title {
+  color: #333;
+  font-size: medium;
+  font-weight: bolder;
+  margin: 0px 20px 0px 20px;
+}
+.p-desc {
+  margin-top: 20px;
+  font-size: small;
 }

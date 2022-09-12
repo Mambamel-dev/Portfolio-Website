@@ -13,7 +13,13 @@ const ProductList = () => {
         {/* map the product data.js in each item into the Product Component */}
         {products.map((item) => (
           //pass the id,img and link of data.js inside the Product Component as props
-          <Product key={item.id} img={item.img} link={item.link} />
+          <Product
+            key={item.id}
+            img={item.img}
+            link={item.link}
+            title={item.title}
+            desc={item.desc}
+          />
         ))}
       </div>
     </div>

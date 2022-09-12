@@ -57,6 +57,7 @@ input {
   margin: 10px 100px;
   font-size: 14px;
   padding-left: 10px;
+  outline-color: #f56942;
 }
 textarea {
   width: 100%;
