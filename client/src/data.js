@@ -1,5 +1,5 @@
 import EFMS from "../src/img/EFMS.png";
-
+import Porfolio from "../src/img/Portfolio.png";
 export const products = [
   {
     id: 1,
@@ -10,7 +10,7 @@ export const products = [
   },
   {
     id: 2,
-    img: "https://www.sitesaga.com/wp-content/uploads/2020/04/what-is-website-how-it-works.png",
+    img: Porfolio,
     link: "https://github.com/Mambamel-dev/Portfolio-Website",
     title: "Porfolio Website",
     desc: "My Pofolio Website using Reactjs with styled components and Email JS",

@@ -11,11 +11,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
 
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
-
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   //handles the form data validation
   const schema = yup.object().shape({
     user_name: yup.string().required("Your Name is required"),
@@ -99,11 +102,23 @@ const Contact = () => {
           {/* pass the handleSubmit method of useform to handle all the inputs before \
           executing OnSubmit method that handles the email js     */}
           <form ref={formRef} onSubmit={handleSubmit(Submit)}>
-            <input type="text" placeholder="Name" {...register("user_name")} />
+            <input
+              style={{
+                // backgroundColor: darkMode && "#f56942",
+                // color: darkMode && "white",
+                border: darkMode && "none",
+              }}
+              type="text"
+              placeholder="Name"
+              {...register("user_name")}
+            />
             {/* check if the user_name has an error then fire the message */}
             <p className="errortext">{errors.user_name?.message}</p>
 
             <input
+              style={{
+                border: darkMode && "none ",
+              }}
               type="text"
               placeholder="Subject"
               {...register("user_subject")}
@@ -112,6 +127,9 @@ const Contact = () => {
             <p className="errortext">{errors.user_subject?.message}</p>
 
             <input
+              style={{
+                border: darkMode && "none ",
+              }}
               type="text"
               placeholder="Email"
               {...register("user_email")}
@@ -120,6 +138,9 @@ const Contact = () => {
             <p className="errortext">{errors.user_email?.message}</p>
 
             <textarea
+              style={{
+                border: darkMode && "none ",
+              }}
               rows="5"
               placeholder="Message"
               {...register("messages")}
