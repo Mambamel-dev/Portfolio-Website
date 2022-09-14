@@ -99,3 +99,18 @@
   font-weight: 200;
   font-size: 200;
 }
+
+@media screen and (max-width: 480px) {
+  .i {
+    flex-direction: column;
+  }
+  .i-left-wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .i-desc {
+    display: none;
+  }
+}
