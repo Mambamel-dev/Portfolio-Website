@@ -78,14 +78,15 @@
     display: none;
   }
   .a-award {
-    flex-direction: column;
+    /* flex-direction: column; */
+    display: none;
   }
-  .a-award-texts {
+  /* .a-award-texts {
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
-  }
+  } */
   .a-right {
     padding: 20px;
   }

@@ -43,3 +43,9 @@
   margin-top: 20px;
   font-size: small;
 }
+@media screen and (max-width: 480px) {
+  .main-p {
+    width: 100%;
+    height: 40vh;
+  }
+}

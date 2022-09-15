@@ -24,3 +24,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 480px) {
+  /* .pl {
+    background-color: red;
+  } */
+  .pl-texts {
+    width: 100%;
+  }
+  .pl-title {
+    font-size: 30px;
+  }
+}
