@@ -74,9 +74,17 @@
   .a-card {
     height: 30vh;
   }
-  .a-card.a-card.bg,
-  .a-award {
+  .a-card.a-card.bg {
     display: none;
+  }
+  .a-award {
+    flex-direction: column;
+  }
+  .a-award-texts {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
   }
   .a-right {
     padding: 20px;
