@@ -21,8 +21,9 @@ const About = () => {
           personal website.
         </p>
         <p className="a-desc">
-          Graduated of Bachelor of Science Major in Information Technology in
-          University of Nueva Caceres
+          <h3 className="a-educ">Education</h3>
+          Bachelor of Science Major in Information Technology <br /> University
+          of Nueva Caceres
         </p>
         <div className="a-award">
           <img src={Award} alt="" className="a-award-img" />

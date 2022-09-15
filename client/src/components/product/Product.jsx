@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./product.css";
 import { ThemeContext } from "../../context";
+import BackToTopButton from "../backToTopButton/BackToTopButton";
 // props from  the Produclist Component
 const Product = ({ img, link, title, desc }) => {
   const theme = useContext(ThemeContext);
@@ -26,6 +27,7 @@ const Product = ({ img, link, title, desc }) => {
         </h2>
         <p className="p-desc">{desc}</p>
       </div>
+      <BackToTopButton />
     </div>
   );
 };

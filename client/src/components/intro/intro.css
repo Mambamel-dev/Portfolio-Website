@@ -106,7 +106,7 @@
   border: none;
   background-color: #f56942;
 }
-button:hover {
+.r-button:hover {
   background-color: #222;
   cursor: pointer;
 }

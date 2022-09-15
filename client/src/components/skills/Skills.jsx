@@ -9,6 +9,7 @@ import Mongodb from "../../img/mongodb.png";
 import Express from "../../img/express.png";
 import Node from "../../img/nodejs.png";
 import "./skills.css";
+import BackToTopButton from "../backToTopButton/BackToTopButton";
 const Skills = () => {
   return (
     <div className="s">
@@ -25,6 +26,7 @@ const Skills = () => {
         <img src={Express} alt="" className="s-icon" />
         <img src={Node} alt="" className="s-icon" />
       </div>
+      <BackToTopButton />
     </div>
   );
 };

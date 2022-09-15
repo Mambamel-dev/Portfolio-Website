@@ -2,6 +2,7 @@ import React from "react";
 import "./productList.css";
 import Product from "../product/Product";
 import { products } from "../../data";
+import BackToTopButton from "../backToTopButton/BackToTopButton";
 const ProductList = () => {
   return (
     <div className="pl">
@@ -22,6 +23,7 @@ const ProductList = () => {
           />
         ))}
       </div>
+      <BackToTopButton />
     </div>
   );
 };

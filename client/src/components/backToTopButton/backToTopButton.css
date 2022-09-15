@@ -1,0 +1,30 @@
+.b-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+}
+.b-buttons button {
+  background-color: transparent;
+  color: #f56942;
+  border: none;
+  font-size: 50px;
+}
+.b-buttons :hover {
+  color: aqua;
+}
+@media screen and (max-width: 480px) {
+  .b-buttons {
+    height: 25px;
+    width: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+  }
+  .b-buttons button {
+    font-size: 25px;
+  }
+}

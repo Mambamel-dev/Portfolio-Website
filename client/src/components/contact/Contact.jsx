@@ -13,6 +13,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext } from "react";
 import { ThemeContext } from "../../context";
+import BackToTopButton from "../backToTopButton/BackToTopButton";
 
 const Contact = () => {
   const formRef = useRef();
@@ -155,6 +156,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <BackToTopButton />
     </div>
   );
 };

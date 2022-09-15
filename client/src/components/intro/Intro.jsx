@@ -1,6 +1,7 @@
 import React from "react";
 import "./intro.css";
 import Me from "../../img/Profile3.png";
+import BackToTopButton from "../backToTopButton/BackToTopButton";
 const Intro = () => {
   return (
     <div className="i">
@@ -85,6 +86,7 @@ const Intro = () => {
         <div className="i-bg"></div>
         <img src={Me} alt="" className="i-img" />
       </div>
+      <BackToTopButton />
     </div>
   );
 };
