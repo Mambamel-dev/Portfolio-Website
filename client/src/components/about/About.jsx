@@ -16,8 +16,8 @@ const About = () => {
         <p className="a-sub">
           Hello! My name is Mel Espiloy an aspiring web developer and I enjoy
           creating things on the internet. My interest in web development
-          started back in 2021, when we created a website project for our
-          thesis, since then I started to like build web projects including my
+          started back in 2021, where we created a website management system for
+          our thesis, since then I started build web projects including my
           personal website.
         </p>
         <p className="a-desc">

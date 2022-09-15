@@ -18,6 +18,11 @@ const Intro = () => {
             </div>
           </div>
           <div className="i-desc">I build things from the web</div>
+          <div className="resume">
+            <a href="Mel Espiloy Resume.pdf" download="Mel Espiloy Resume.pdf">
+              <button className="r-button">Donwload my CV</button>
+            </a>
+          </div>
         </div>
         <svg
           width="75"

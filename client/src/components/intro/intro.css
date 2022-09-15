@@ -99,6 +99,17 @@
   font-weight: 200;
   font-size: 200;
 }
+.resume {
+  margin-top: 20px;
+}
+.r-button {
+  border: none;
+  background-color: #f56942;
+}
+button:hover {
+  background-color: #222;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 480px) {
   .i {
@@ -112,5 +123,8 @@
   }
   .i-desc {
     display: none;
+  }
+  .resume {
+    margin-top: 20px;
   }
 }
